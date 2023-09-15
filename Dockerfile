@@ -8,5 +8,5 @@ RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt
 
 COPY . /app
 ENTRYPOINT ["flask"]
-CMD ["--app", "app", "run", "--debug"]
+CMD ["--app", "app", "run", "--debug", "--host", "0.0.0.0"]
 

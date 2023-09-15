@@ -11,6 +11,9 @@ requirements: ensure-piptools
 dev: ensure-piptools
 	python -m piptools sync requirements-dev.txt
 
+build:
+	docker compose build
+
 up:
 	docker compose up
 
