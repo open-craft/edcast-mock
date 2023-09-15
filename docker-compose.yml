@@ -1,0 +1,16 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    stop_signal: SIGINT
+    ports:
+      - '5000:5000'
+    hostname: edcast.mock
+    networks:
+      - devstack-nutmegmaster_default
+
+networks:
+  devstack-nutmegmaster_default:
+    external: true
